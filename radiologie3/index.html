@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Interpretation de Radiographie Thoracique</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0891b2;
+            --bg-gradient: linear-gradient(135deg, #ecfeff 0%, #cffafe 100%);
+            --card-bg: #ffffff;
+        }
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+            background: var(--bg-gradient);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            color: #1e293b;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        h1 { text-align: center; color: var(--primary-color); margin-bottom: 10px; }
+        .subtitle { text-align: center; color: #64748b; margin-bottom: 25px; }
+        .retour {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background: #64748b;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+        .retour:hover { background: #475569; }
+        .buttons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 12px;
+        }
+        .btn-radiologie {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-radiologie:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(8, 145, 178, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+            .container { padding: 15px; }
+            h1 { font-size: 1.3rem; }
+            .buttons-grid { grid-template-columns: 1fr; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="retour">
+            <i class="fas fa-arrow-left"></i> Retour
+        </a>
+        
+        <h1><i class="fas fa-x-ray"></i> Interprétation de Radiographie Thoracique</h1>
+        <p class="subtitle">Dr HOURI - Segments</p>
+        
+        <div class="buttons-grid">
+            <a href="segment_1.html" class="btn-radiologie" target="_blank">Page 1</a>
+            <a href="segment_2.html" class="btn-radiologie" target="_blank">Page 2</a>
+            <a href="segment_3.html" class="btn-radiologie" target="_blank">Page 3</a>
+            <a href="segment_4.html" class="btn-radiologie" target="_blank">Page 4</a>
+            <a href="segment_5-6.html" class="btn-radiologie" target="_blank">Pages 5-6</a>
+            <a href="segment_7-8.html" class="btn-radiologie" target="_blank">Pages 7-8</a>
+            <a href="segment_9.html" class="btn-radiologie" target="_blank">Page 9</a>
+            <a href="segment_10-20.html" class="btn-radiologie" target="_blank">Pages 10-20</a>
+            <a href="segment_21-23.html" class="btn-radiologie" target="_blank">Pages 21-23</a>
+            <a href="segment_24-32.html" class="btn-radiologie" target="_blank">Pages 24-32</a>
+            <a href="segment_33-35.html" class="btn-radiologie" target="_blank">Pages 33-35</a>
+            <a href="segment_36-38.html" class="btn-radiologie" target="_blank">Pages 36-38</a>
+            <a href="segment_39-42.html" class="btn-radiologie" target="_blank">Pages 39-42</a>
+            <a href="segment_43.html" class="btn-radiologie" target="_blank">Page 43</a>
+            <a href="segment_44.html" class="btn-radiologie" target="_blank">Page 44</a>
+            <a href="segment_45-52.html" class="btn-radiologie" target="_blank">Pages 45-52</a>
+            <a href="segment_53-55.html" class="btn-radiologie" target="_blank">Pages 53-55</a>
+            <a href="segment_56-57.html" class="btn-radiologie" target="_blank">Pages 56-57</a>
+            <a href="segment_58-59.html" class="btn-radiologie" target="_blank">Pages 58-59</a>
+            <a href="segment_60-62.html" class="btn-radiologie" target="_blank">Pages 60-62</a>
+            <a href="segment_63-64.html" class="btn-radiologie" target="_blank">Pages 63-64</a>
+            <a href="segment_65-66.html" class="btn-radiologie" target="_blank">Pages 65-66</a>
+            <a href="segment_67-68.html" class="btn-radiologie" target="_blank">Pages 67-68</a>
+            <a href="segment_69-70.html" class="btn-radiologie" target="_blank">Pages 69-70</a>
+            <a href="segment_71-73.html" class="btn-radiologie" target="_blank">Pages 71-73</a>
+            <a href="segment_74.html" class="btn-radiologie" target="_blank">Page 74</a>
+            <a href="segment_75-76.html" class="btn-radiologie" target="_blank">Pages 75-76</a>
+            <a href="segment_77-78.html" class="btn-radiologie" target="_blank">Pages 77-78</a>
+            <a href="segment_79-80.html" class="btn-radiologie" target="_blank">Pages 79-80</a>
+            <a href="segment_81-82.html" class="btn-radiologie" target="_blank">Pages 81-82</a>
+            <a href="segment_83-84.html" class="btn-radiologie" target="_blank">Pages 83-84</a>
+            <a href="segment_85-86.html" class="btn-radiologie" target="_blank">Pages 85-86</a>
+            <a href="index.html" class="btn-radiologie" style="background: linear-gradient(135deg, #64748b 0%, #475569 100%);" target="_blank">Toutes les images</a>
+        </div>
+    </div>
+</body>
+</html>
