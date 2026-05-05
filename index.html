@@ -33,6 +33,21 @@
         }
         h1 { text-align: center; color: var(--primary-color); margin-bottom: 10px; }
         .subtitle { text-align: center; color: #64748b; margin-bottom: 30px; }
+        .back-btn {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: #64748b;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .back-btn:hover { background: #475569; }
+        .back-btn.visible { display: inline-flex; }
         .buttons-grid {
             display: flex;
             flex-direction: column;
@@ -68,26 +83,35 @@
 </head>
 <body>
     <div class="container">
-	<a href="#" class="back-btn" onclick="history.back(); return false;">
-            <i class="fas fa-arrow-right"></i>
-            Retour
+        <a href="#" id="backBtn" class="back-btn" onclick="window.location.href = sessionStorage.getItem('sourceUrl'); return false;">
+            <i class="fas fa-arrow-left"></i> Retour
         </a>
         <h1><i class="fas fa-x-ray"></i> Radiologie Dr HOURI</h1>
         <p class="subtitle">Sélectionnez un dossier</p>
         
         <div class="buttons-grid">
             <a href="radiologie/index.html" class="btn-radiologie">
-                <i class="fas fa-folder"></i> Radiologie pulmonaire d’origine cardiaque
+                <i class="fas fa-folder"></i> Radiologie pulmonaire d'origine cardiaque
             </a>
-			<a href="radiologie3/index.html" class="btn-radiologie">
+            <a href="radiologie3/index.html" class="btn-radiologie">
                 <i class="fas fa-folder"></i> Principes radio thorax
             </a>
             <a href="radiologie2/index.html" class="btn-radiologie">
-                <i class="fas fa-folder"></i> Série de radios thoraciques (+800) 
-				Dr HOURI
+                <i class="fas fa-folder"></i> Serie de radios thoraciques (+800) 
+                Dr HOURI
             </a>
             
         </div>
     </div>
+
+    <script>
+        // Detecter et sauvegarder l'URL source
+        const urlParams = new URLSearchParams(window.location.search);
+        const sourceUrl = urlParams.get('from');
+        if (sourceUrl) {
+            sessionStorage.setItem('sourceUrl', sourceUrl);
+            document.getElementById('backBtn').classList.add('visible');
+        }
+    </script>
 </body>
 </html>
