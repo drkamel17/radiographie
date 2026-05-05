@@ -48,6 +48,25 @@
         }
         .back-btn:hover { background: #475569; }
         .back-btn.visible { display: inline-flex; }
+        .floating-back {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            padding: 15px 25px;
+            background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+        }
+        .floating-back:hover {
+            background: linear-gradient(135deg, #0e7490 0%, #0891b2 100%);
+            transform: scale(1.05);
+        }
+        .floating-back.visible { display: block; }
         .buttons-grid {
             display: flex;
             flex-direction: column;
@@ -78,10 +97,20 @@
             body { padding: 10px; }
             .container { padding: 20px; }
             h1 { font-size: 1.3rem; }
+            .floating-back {
+                bottom: 10px;
+                left: 10px;
+                padding: 12px 20px;
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
 <body>
+    <a href="#" id="floatingBack" class="floating-back" onclick="window.location.href = sessionStorage.getItem('sourceUrl'); return false;">
+        <i class="fas fa-arrow-left"></i> Retour au site
+    </a>
+    
     <div class="container">
         <a href="#" id="backBtn" class="back-btn" onclick="window.location.href = sessionStorage.getItem('sourceUrl'); return false;">
             <i class="fas fa-arrow-left"></i> Retour
@@ -105,12 +134,14 @@
     </div>
 
     <script>
-        // Detecter et sauvegarder l'URL source
         const urlParams = new URLSearchParams(window.location.search);
         const sourceUrl = urlParams.get('from');
         if (sourceUrl) {
             sessionStorage.setItem('sourceUrl', sourceUrl);
+        }
+        if (sessionStorage.getItem('sourceUrl')) {
             document.getElementById('backBtn').classList.add('visible');
+            document.getElementById('floatingBack').classList.add('visible');
         }
     </script>
 </body>

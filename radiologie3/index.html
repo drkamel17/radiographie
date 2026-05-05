@@ -43,6 +43,25 @@
             font-size: 0.9rem;
         }
         .retour:hover { background: #475569; }
+        .floating-back {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            padding: 15px 25px;
+            background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+        }
+        .floating-back:hover {
+            background: linear-gradient(135deg, #0e7490 0%, #0891b2 100%);
+            transform: scale(1.05);
+        }
+        .floating-back.visible { display: block; }
         .buttons-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -79,9 +98,13 @@
     </style>
 </head>
 <body>
+    <a href="#" id="floatingBack" class="floating-back" onclick="window.location.href = sessionStorage.getItem('sourceUrl'); return false;">
+        <i class="fas fa-arrow-left"></i> Retour au site
+    </a>
+    
     <div class="container">
         <a href="../index.html" class="retour">
-            <i class="fas fa-arrow-left"></i> Site principal
+            <i class="fas fa-arrow-left"></i> Retour
         </a>
         
         <h1><i class="fas fa-x-ray"></i> Interprétation de Radiographie Thoracique</h1>
@@ -122,5 +145,11 @@
             <a href="segment_85-86.html" class="btn-radiologie">32- Syndrome médiastinal</a>
         </div>
     </div>
+
+    <script>
+        if (sessionStorage.getItem('sourceUrl')) {
+            document.getElementById('floatingBack').classList.add('visible');
+        }
+    </script>
 </body>
 </html>
