@@ -8,63 +8,31 @@
     <title>Pages 10-20</title>
     <style>
         * { box-sizing: border-box; }
-        body { font-family: Arial, sans-serif; margin: 20px; background: #f5f5f5; }
-        .page { margin-bottom: 30px; text-align: center; }
-        .page img { max-width: 100%; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
-        .page-number { color: #666; margin: 10px 0; }
-    
-        .return-btn { position: fixed; top: 10px; left: 10px; padding: 10px 16px; font-size: 14px; padding: 12px 20px; background: #0891b2; color: white; text-decoration: none; border-radius: 25px; font-weight: bold; z-index: 1000; }
+        body { margin: 0; padding: 0; background: #1a1a1a; }
+        .return-btn {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            padding: 12px 20px;
+            background: #0891b2;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            z-index: 1000;
+            font-family: Arial, sans-serif;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
         .return-btn:hover { background: #0e7490; }
-
+        iframe {
+            width: 100vw;
+            height: 100vh;
+            border: none;
+        }
     </style>
 </head>
 <body>
     <a href="index.html" class="return-btn">← Retour</a>
-
-    <h1>Pages 10-20</h1>
-    <div class="page">
-        <div class="page-number">Page 10</div>
-        <img src="images/page_010.jpg" alt="Page 10">
-    </div>
-    <div class="page">
-        <div class="page-number">Page 11</div>
-        <img src="images/page_011.jpg" alt="Page 11">
-    </div>
-    <div class="page">
-        <div class="page-number">Page 12</div>
-        <img src="images/page_012.jpg" alt="Page 12">
-    </div>
-    <div class="page">
-        <div class="page-number">Page 13</div>
-        <img src="images/page_013.jpg" alt="Page 13">
-    </div>
-    <div class="page">
-        <div class="page-number">Page 14</div>
-        <img src="images/page_014.jpg" alt="Page 14">
-    </div>
-    <div class="page">
-        <div class="page-number">Page 15</div>
-        <img src="images/page_015.jpg" alt="Page 15">
-    </div>
-    <div class="page">
-        <div class="page-number">Page 16</div>
-        <img src="images/page_016.jpg" alt="Page 16">
-    </div>
-    <div class="page">
-        <div class="page-number">Page 17</div>
-        <img src="images/page_017.jpg" alt="Page 17">
-    </div>
-    <div class="page">
-        <div class="page-number">Page 18</div>
-        <img src="images/page_018.jpg" alt="Page 18">
-    </div>
-    <div class="page">
-        <div class="page-number">Page 19</div>
-        <img src="images/page_019.jpg" alt="Page 19">
-    </div>
-    <div class="page">
-        <div class="page-number">Page 20</div>
-        <img src="images/page_020.jpg" alt="Page 20">
-    </div>
+    <iframe src="segment_10-20.pdf"></iframe>
 </body>
 </html>
